@@ -7,7 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    
+
 
     <style>body{background:#f7f8fb;} </style>
     @stack('css')
@@ -16,7 +16,9 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="../../img/iot_icon1.png" ... alt="Logo IOT" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="{{ asset('img/iot_icon1.png') }}" alt="Logo IOT" width="30" height="24" class="d-inline-block align-text-top">
+
+
       IOT
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +47,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-@stack('js')     
+@stack('js')
 </footer>
 </body>
 </html>
