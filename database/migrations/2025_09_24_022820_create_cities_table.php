@@ -11,21 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('cities', function (Blueprint $table) {
             $table->id();
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->string('username');
-            $table->string('role');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->string('mobilephone');
-            $table->boolean('status');
-            $table->integer('id_city');
+            $table->string('name');
+            $table->string('code');
+            $table->string('abbrev');
+            $table->boolean('status')->default(true);
+            $table->integer('id_department');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
-            
         });
     }
 
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('cities');
     }
 };
