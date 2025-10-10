@@ -1,16 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-Route::view('/','index')->name('home');
+use App\Http\Controllers\{
+ContactController,
+StastionController,
+SensorController
+};
+use App\Http\Controllers\DataApiController;
+
+Route::get('/', [DashboardController::class, 'index'])->name('home'); // o 'dashboard'
+Route::resource('stations', StastionController::class)->only(['index','create','store']);
+Route::resource('sensors', SensorController::class)->only(['index','create','store']);
+Route::get('/telemetry', [DataApiController::class,'series'])->name('api.telemetry');

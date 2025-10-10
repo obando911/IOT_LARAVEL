@@ -16,7 +16,10 @@ return new class extends Migration
             $t->string('name');
             $t->string('code')->nullable();
             $t->boolean('status')->default(true);
-            $t->timestamps();
+            $t->foreignId('id_city')->constrained('cities')->cascadeOnDelete();
+            $t->timestamps('created_at');
+            $t->timestamps('update_at');
+            $t->timestamps('deleted_at');
 
         });
     }

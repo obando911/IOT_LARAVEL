@@ -36,10 +36,10 @@
 
         @guest
             <li class="nav-item">
-                {{-- <a class="nav-link" href="{{ route('login') }}">Login</a> --}}
+                {{-- <a class="nav-link" href="">Login</a> --}}
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">Register</a>
+                <a class="nav-link" href="">Register</a>
             </li>
         @else
             <li class="nav-item dropdown">
@@ -50,13 +50,13 @@
 
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li>
-                        <a class="dropdown-item" href="{{ route('logout') }}"
+                        <a class="dropdown-item" href=""
                            onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
                             Cerrar sesión
                         </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        <form id="logout-form" action="" method="POST" class="d-none">
                             @csrf
                         </form>
                     </li>
